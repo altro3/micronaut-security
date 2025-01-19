@@ -18,7 +18,7 @@ package io.micronaut.security.authentication;
 import io.micronaut.core.annotation.Creator;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.serde.annotation.Serdeable;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 import java.io.Serializable;
 
@@ -29,11 +29,11 @@ import java.io.Serializable;
  */
 @Serdeable
 public class UsernamePasswordCredentials implements Serializable, AuthenticationRequest<String, String> {
-    @NotBlank
+    @Size(min = 1)
     @Nullable
     private String username;
 
-    @NotBlank
+    @Size(min = 1)
     @Nullable
     private String password;
 
