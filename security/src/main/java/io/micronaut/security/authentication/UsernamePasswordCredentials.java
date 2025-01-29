@@ -19,8 +19,6 @@ import io.micronaut.core.annotation.Creator;
 import io.micronaut.core.annotation.Nullable;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-
 import java.io.Serializable;
 
 /**
